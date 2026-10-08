@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ramya Sri | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        /* ================= HOME ================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #eaf2ff;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h3 {
+            font-size: 22px;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            font-weight: bold;
+            color: #374151;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ================= PROJECT ================= */
+
+        .project-card {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .project-card h3 {
+            font-size: 23px;
+        }
+
+        .project-tech {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 7px 14px;
+            background: #eaf2ff;
+            color: #2563eb;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            font-size: 16px;
+        }
+
+        .contact a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #030712;
+            color: white;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 5%;
+            }
+
+            header h2 {
+                font-size: 22px;
+            }
+
+            nav a {
+                margin: 4px 7px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h3 {
+                font-size: 18px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero h3 {
+                font-size: 16px;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 3px 5px;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h2>Ramya Sri</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#internships">Internships</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+    <div>
+
+        <h1>Hello, I'm <span>Ramya Sri</span></h1>
+
+        <h3>B.Tech Computer Science Engineering Student</h3>
+
+        <p>
+            Aspiring Software Developer with skills in Python, SQL,
+            MySQL and basic Java. Interested in software development,
+            database technologies and problem solving.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a final-year B.Tech Computer Science Engineering student
+            at Ideal Institute of Technology, Kakinada.
+        </p>
+
+        <br>
+
+        <p>
+            I have a foundation in Python, SQL, MySQL and basic Java.
+            I am interested in software development, database technologies
+            and problem solving. I am continuously improving my technical
+            and communication skills to start my career in the IT industry.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>B.Tech - Computer Science Engineering</h3>
+
+            <p>
+                <strong>Institute:</strong>
+                Ideal Institute of Technology, Kakinada
+            </p>
+
+            <p>
+                <strong>Expected Graduation:</strong> 2027
+            </p>
+
+            <p>
+                <strong>CGPA:</strong> 8.0
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Intermediate - MPC</h3>
+
+            <p>
+                <strong>College:</strong>
+                Pragati Junior College, Samalkota
+            </p>
+
+            <p>
+                <strong>Percentage:</strong> 75%
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>School Education</h3>
+
+            <p>
+                <strong>School:</strong>
+                Thakshasila Model School, Gandepalli
+            </p>
+
+            <p>
+                <strong>SSC CGPA:</strong> 10/10
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">Python</div>
+
+        <div class="skill">Java Basics</div>
+
+        <div class="skill">SQL</div>
+
+        <div class="skill">MySQL</div>
+
+        <div class="skill">Data Structures Basics</div>
+
+        <div class="skill">Problem Solving</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTERNSHIPS ================= -->
+
+<section id="internships">
+
+    <h2 class="section-title">Internships</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>SQL & DBMS Virtual Internship</h3>
+
+            <p>
+                <strong>Organization:</strong> EduSkills
+            </p>
+
+            <p>
+                <strong>Duration:</strong> June 2026 – August 2026
+            </p>
+
+            <p>
+                Gained practical exposure to SQL, database management
+                concepts and working with relational databases.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>AI/ML Virtual Internship</h3>
+
+            <p>
+                <strong>Organization:</strong> EduSkills
+            </p>
+
+            <p>
+                <strong>Duration:</strong> January 2025 – March 2025
+            </p>
+
+            <p>
+                Gained exposure to Artificial Intelligence and Machine
+                Learning concepts through virtual learning.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT ================= -->
+
+<section id="projects">
+
+    <h2 class="section-title">Project</h2>
+
+    <div class="project-card">
+
+        <div class="card">
+
+            <h3>Employee Management & Salary Analysis</h3>
+
+            <p>
+                A SQL-based database project designed to manage employee
+                information and analyze salary-related data.
+            </p>
+
+            <p>
+                The project uses relational database concepts to organize
+                employee and department information and perform different
+                types of data analysis.
+            </p>
+
+            <p>
+                <strong>Key Concepts:</strong>
+                SELECT, WHERE, GROUP BY, HAVING, JOINs,
+                Subqueries, Aggregate Functions and Window Functions.
+            </p>
+
+            <span class="project-tech">
+                MySQL / SQL
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Cisco AI Fundamentals</h3>
+
+            <p>
+                Certification related to Artificial Intelligence
+                fundamentals from Cisco.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Red Hat System Administration II</h3>
+
+            <p>
+                RH134 – RHA, Version 8.2
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Red Hat OpenShift Applications</h3>
+
+            <p>
+                Introduction to Red Hat OpenShift Applications
+                (DO101), Version 4.6
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STRENGTHS ================= -->
+
+<section id="strengths">
+
+    <h2 class="section-title">Strengths</h2>
+
+    <div class="skills">
+
+        <div class="skill">Positive Attitude</div>
+
+        <div class="skill">Responsibility</div>
+
+        <div class="skill">Adaptability</div>
+
+        <div class="skill">Self-Motivation</div>
+
+        <div class="skill">Willingness to Learn</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOBBIES ================= -->
+
+<section id="hobbies">
+
+    <h2 class="section-title">Hobbies</h2>
+
+    <div class="skills">
+
+        <div class="skill">Badminton</div>
+
+        <div class="skill">Travelling</div>
+
+        <div class="skill">Learning New Skills</div>
+
+        <div class="skill">Watching Movies</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <p>
+        📧 Email:
+        <a href="mailto:kethinaramyasri@gmail.com">
+            kethinaramyasri@gmail.com
+        </a>
+    </p>
+
+    <p>
+        📱 Phone:
+        <a href="tel:+919014874715">
+            +91 90148 74715
+        </a>
+    </p>
+
+    <p>
+        💼 LinkedIn:
+        <a
+            href="https://www.linkedin.com/in/ramyasri-kethina-9bb9b6323"
+            target="_blank"
+            rel="noopener noreferrer">
+            View LinkedIn
+        </a>
+    </p>
+
+    <p>
+        💻 GitHub:
+        <a
+            href="https://github.com/kethinaramyasri"
+            target="_blank"
+            rel="noopener noreferrer">
+            View GitHub
+        </a>
+    </p>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Ramya Sri. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
